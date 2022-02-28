@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  
+  <title>Advice generator app</title>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="quote-number">
+      <p>Advice #<span id="adviceNumber"></span></p>
+    </div>
+    <div class="quote">
+      <p>"<span id="quote"></span>"</p>
+      <img  src="images/pattern-divider-desktop.svg">
+    </div>
+  </div>
+<div class="dice-icon" >
+  <img src="images/icon-dice.svg">
+</div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Tuya Senff 2022</a>.
+  </div>
+</body>
+<script>
+
+  const api_url='https://api.adviceslip.com/advice';
+
+  async function getURL(){
+    const response = await fetch(api_url);
+    const data = await response.json();
+
+    document.getElementById('adviceNumber').textContent = data.slip.id
+    document.getElementById('quote').textContent = data.slip.advice
+  }
+  getURL();
+</script>
+</html>
