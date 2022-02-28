@@ -1,12 +1,14 @@
 html, body{
     height: 100%;
-    background-color: hsl(217, 46%, 15%);
+    background-color: hsl(218, 42%, 10%);
     font-family: 'Manrope', sans-serif;
     margin: 0;
     padding: 0;
 }
 .container{
     max-width: 500px;
+    min-height: 200px;
+    box-shadow: 20px 50px 12px 25px  hsl(218, 42%, 12%);
     height: auto;
     margin: auto;
     background-color:hsl(217, 19%, 24%);
@@ -23,23 +25,35 @@ html, body{
     text-align: center;
     color:hsl(193, 38%, 86%);
     font-size: 28px;
+    padding: 10px 15px 10px 15px;
+}
+#quote-img{
+    padding-bottom: 25px;
 }
 img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 20px;
+   
+   
 }
-.dice-icon{
-   filter: saturate(9);
-    
+
+.dice-icon img{
+   filter: saturate(900);
+   box-shadow: 0px 0px 10px 0px #0ff;
+   cursor: pointer;  
+  
+}
+
+.dice-icon img:hover{
+    box-shadow: 0px 0px 40px 0px #0ff;
 }
 .attribution {
-    padding: 5px;
-    margin:5px;
+    padding-top: 55px;
+    margin-top:55px;
    
     color: #ffffff;
-    bottom: 6px;
+    bottom: 0px;
     font-size: 11px; text-align: center; 
 
 }
