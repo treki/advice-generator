@@ -15,20 +15,20 @@
 </head>
 <body>
 
-  <div class="container">
+  <div role="main" class="container">
     <div class="quote-number">
-      <p>Advice #<span id="adviceNumber"></span></p>
+      <h1>Advice #<span id="adviceNumber"></span></h1>
     </div>
     <div class="quote">
       <p>"<span id="quote"></span>"</p>
-      <img  id="quote-img" src="images/pattern-divider-desktop.svg">
+      <img  id="quote-img" alt="pattern" src="images/pattern-divider-desktop.svg">
     </div>
   </div>
-<div class="dice-icon" >
-  <img onclick="getURL()" id="glow" src="images/icon-dice.svg">
+<div role="img" class="dice-icon" >
+  <img onclick="getURL()" alt="icon" id="glow" src="images/icon-dice.svg">
 </div>
   
-  <div class="attribution">
+  <div role="footer" class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Tuya Senff 2022</a>.
   </div>
